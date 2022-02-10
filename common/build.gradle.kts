@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
 }
@@ -8,11 +8,8 @@ android {
     compileSdk = Config.compileSdk
 
     defaultConfig {
-        applicationId = Config.packageName
         minSdk = Config.minSDK
         targetSdk = Config.targetSDK
-        versionCode = Config.versionCode
-        versionName = Config.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -52,45 +49,11 @@ android {
 dependencies {
 
     implementation(
-        Dependencies.Kotlin.stdlib
-    )
-
-    implementation(
-        Dependencies.Android.appCompat,
-        Dependencies.Android.coreKtx,
-        Dependencies.Android.material,
-    )
-
-    implementation(
         Dependencies.Compose.ui,
         Dependencies.Compose.material,
-        Dependencies.Compose.livedata,
-        Dependencies.Compose.tooling,
+        Dependencies.Compose.tooling
     )
-
-    implementation(
-        Dependencies.Accompanist.insets,
-        Dependencies.Accompanist.systemuicontroller,
-        Dependencies.Accompanist.flowlayouts,
-    )
-
-    implementation(
-        Dependencies.Lifecycle.activityCompose,
-        Dependencies.Lifecycle.viewModelCompose,
-        Dependencies.Lifecycle.lifecycleKtx,
-    )
-
-    implementation(Dependencies.Navigation.navigationCompose)
 
     implementation(Dependencies.Dagger.dagger)
     kapt(Dependencies.Dagger.daggerCompiler)
-
-    testImplementation(Dependencies.Test.jUnit)
-    androidTestImplementation(
-        Dependencies.Test.androidJUnit,
-        Dependencies.Test.espresso
-    )
-
-    androidTestImplementation(Dependencies.Compose.uiTest)
-    debugImplementation(Dependencies.Compose.toolingTest)
 }

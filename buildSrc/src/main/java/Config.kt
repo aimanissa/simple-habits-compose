@@ -7,5 +7,5 @@ object Config {
     const val versionCode = 1
     const val versionName = "1.0"
 
-    const val packageName = "com.aymanissa.simplehabits"
+    const val packageName = "com.aimanissa.simplehabits"
 }
