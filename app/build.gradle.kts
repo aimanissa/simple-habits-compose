@@ -34,7 +34,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
@@ -52,7 +52,11 @@ android {
 dependencies {
 
     implementation(
-        Dependencies.Kotlin.stdlib
+        project(":domain"),
+        project(":data"),
+        project(":common"),
+        project(":feature-home"),
+        project(":feature-new-habits")
     )
 
     implementation(
@@ -64,8 +68,7 @@ dependencies {
     implementation(
         Dependencies.Compose.ui,
         Dependencies.Compose.material,
-        Dependencies.Compose.livedata,
-        Dependencies.Compose.tooling,
+        Dependencies.Compose.tooling
     )
 
     implementation(

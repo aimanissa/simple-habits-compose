@@ -31,13 +31,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
-    }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.Compose.version
+        jvmTarget = "1.8"
     }
     packagingOptions {
         resources {
@@ -48,9 +42,7 @@ android {
 
 dependencies {
 
-    implementation(
-        Dependencies.Kotlin.stdlib
-    )
+    implementation(project(":domain"))
 
     implementation(
         Dependencies.Coroutines.core,

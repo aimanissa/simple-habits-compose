@@ -31,7 +31,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = "1.8"
     }
     buildFeatures {
         compose = true
@@ -49,7 +49,8 @@ android {
 dependencies {
 
     implementation(
-        Dependencies.Kotlin.stdlib
+        project(":domain"),
+        project(":common")
     )
 
     implementation(
@@ -62,11 +63,6 @@ dependencies {
         Dependencies.Compose.ui,
         Dependencies.Compose.material,
         Dependencies.Compose.tooling
-    )
-
-    implementation(
-        Dependencies.Lifecycle.viewModelCompose,
-        Dependencies.Lifecycle.lifecycleKtx
     )
 
     implementation(Dependencies.Navigation.navigationCompose)

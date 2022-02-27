@@ -1,14 +1,19 @@
 object Dependencies {
 
+    object Jvm {
+        const val targetVersion = "1.8"
+        const val inject = "javax.inject:javax.inject:1"
+    }
+
     object Kotlin {
-        private const val version = "1.5.31"
+        private const val version = "1.6.10"
         const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$version"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
         const val extensions = "org.jetbrains.kotlin:kotlin-android-extensions:$version"
     }
 
     object Gradle {
-        const val gradle = "com.android.tools.build:gradle:7.0.2"
+        const val gradle = "com.android.tools.build:gradle:7.0.4"
     }
 
     object Coroutines {
@@ -19,18 +24,19 @@ object Dependencies {
     }
 
     object Compose {
-        const val version = "1.0.5"
+        const val version = "1.1.1"
         const val ui = "androidx.compose.ui:ui:$version"
         const val material = "androidx.compose.material:material:$version"
         const val tooling = "androidx.compose.ui:ui-tooling-preview:$version"
-        const val livedata = "androidx.compose.runtime:runtime-livedata:$version"
+        const val runtime = "androidx.compose.runtime:runtime:$version"
+        const val compiler = "androidx.compose.compiler:compiler:$version"
 
         const val toolingTest = "androidx.compose.ui:ui-tooling:$version"
         const val uiTest = "androidx.compose.ui:ui-test-junit4:$version"
     }
 
     object Accompanist {
-        private const val version = "0.18.0"
+        private const val version = "0.22.0-rc"
         const val insets = "com.google.accompanist:accompanist-insets:$version"
         const val systemuicontroller = "com.google.accompanist:accompanist-systemuicontroller:$version"
         const val flowlayouts = "com.google.accompanist:accompanist-flowlayout:$version"
@@ -43,7 +49,7 @@ object Dependencies {
     }
 
     object Room {
-        private const val version = "2.3.0"
+        private const val version = "2.4.1"
         const val ktx = "androidx.room:room-ktx:$version"
         const val runtime = "androidx.room:room-runtime:$version"
         const val paging = "androidx.room:room-paging:2.4.0-alpha04"
@@ -61,9 +67,9 @@ object Dependencies {
     }
 
     object Lifecycle {
-        const val lifecycleKtx = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
-        const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07"
-        const val activityCompose = "androidx.activity:activity-compose:1.3.1"
+        const val lifecycleKtx = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+        const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
+        const val activityCompose = "androidx.activity:activity-compose:1.4.0"
     }
 
     object Test {

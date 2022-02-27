@@ -10,4 +10,5 @@ java {
 dependencies {
 
     implementation(Dependencies.Coroutines.core)
+    implementation(Dependencies.Jvm.inject)
 }
