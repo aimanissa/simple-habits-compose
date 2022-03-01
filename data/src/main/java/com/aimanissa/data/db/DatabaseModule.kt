@@ -15,7 +15,7 @@ class DatabaseModule {
         return Room.databaseBuilder(
             appContext,
             HabitsDatabase::class.java,
-            "habits_database"
+            HABITS_DATABASE
         ).fallbackToDestructiveMigration().build()
     }
 
@@ -23,5 +23,9 @@ class DatabaseModule {
     @Provides
     fun provideHabitsDao(database: HabitsDatabase): HabitsDao {
         return database.habitsDao()
+    }
+
+    companion object {
+        private const val HABITS_DATABASE = "habits_database"
     }
 }

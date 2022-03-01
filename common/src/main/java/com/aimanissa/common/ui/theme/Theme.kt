@@ -1,4 +1,4 @@
-package com.aimanissa.simplehabits.ui.theme
+package com.aimanissa.common.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

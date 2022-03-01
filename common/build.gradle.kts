@@ -54,6 +54,8 @@ dependencies {
         Dependencies.Compose.tooling
     )
 
+    implementation(Dependencies.Navigation.navigationCompose)
+
     implementation(Dependencies.Dagger.dagger)
     kapt(Dependencies.Dagger.daggerCompiler)
 }

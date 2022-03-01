@@ -42,11 +42,18 @@ android {
 
 dependencies {
 
-    implementation(project(":domain"))
+    implementation(
+        project(":domain"),
+        project(":common")
+    )
 
     implementation(
         Dependencies.Coroutines.core,
         Dependencies.Coroutines.android
+    )
+
+    implementation(
+        Dependencies.Compose.runtime
     )
 
     implementation(
