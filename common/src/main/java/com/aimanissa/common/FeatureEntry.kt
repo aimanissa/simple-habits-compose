@@ -7,8 +7,16 @@ import androidx.navigation.NavDeepLink
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
+import dagger.Module
+import dagger.multibindings.Multibinds
 
 typealias Destinations = Map<Class<out FeatureEntry>, @JvmSuppressWildcards FeatureEntry>
+
+@Module
+abstract class FeatureDestinationsModule private constructor() {
+    @Multibinds
+    abstract fun featureDestinations(): Destinations
+}
 
 interface FeatureEntry {
 
@@ -41,7 +49,6 @@ interface AggregateFeatureEntry : FeatureEntry {
 
     fun NavGraphBuilder.navigation(navController: NavHostController, destinations: Destinations)
 }
-
 
 inline fun <reified T : FeatureEntry> Destinations.find(): T =
     findOrNull() ?: error("Unable to find '${T::class.java}' destination.")

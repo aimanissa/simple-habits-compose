@@ -6,14 +6,14 @@ object Dependencies {
     }
 
     object Kotlin {
-        private const val version = "1.6.10"
+        private const val version = "1.5.31"
         const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$version"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
         const val extensions = "org.jetbrains.kotlin:kotlin-android-extensions:$version"
     }
 
     object Gradle {
-        const val gradle = "com.android.tools.build:gradle:7.0.4"
+        const val gradle = "com.android.tools.build:gradle:7.1.1"
     }
 
     object Coroutines {
@@ -24,7 +24,7 @@ object Dependencies {
     }
 
     object Compose {
-        const val version = "1.1.1"
+        const val version = "1.0.5"
         const val ui = "androidx.compose.ui:ui:$version"
         const val material = "androidx.compose.material:material:$version"
         const val tooling = "androidx.compose.ui:ui-tooling-preview:$version"
@@ -36,14 +36,14 @@ object Dependencies {
     }
 
     object Accompanist {
-        private const val version = "0.22.0-rc"
+        private const val version = "0.20.0"
         const val insets = "com.google.accompanist:accompanist-insets:$version"
         const val systemuicontroller = "com.google.accompanist:accompanist-systemuicontroller:$version"
         const val flowlayouts = "com.google.accompanist:accompanist-flowlayout:$version"
     }
 
     object Dagger {
-        private const val version = "2.36"
+        private const val version = "2.39.1"
         const val dagger = "com.google.dagger:dagger:$version"
         const val daggerCompiler = "com.google.dagger:dagger-compiler:$version"
     }
@@ -57,18 +57,18 @@ object Dependencies {
     }
 
     object Navigation {
-        const val navigationCompose = "androidx.navigation:navigation-compose:2.4.0-rc01"
+        const val navigationCompose = "androidx.navigation:navigation-compose:2.4.1"
     }
 
     object Android {
-        const val coreKtx = "androidx.core:core-ktx:1.6.0"
-        const val appCompat = "androidx.appcompat:appcompat:1.3.1"
+        const val coreKtx = "androidx.core:core-ktx:1.7.0"
+        const val appCompat = "androidx.appcompat:appcompat:1.4.0"
         const val material = "com.google.android.material:material:1.4.0"
     }
 
     object Lifecycle {
-        const val lifecycleKtx = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
-        const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
+        const val lifecycleKtx = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+        const val viewModelCompose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0"
         const val activityCompose = "androidx.activity:activity-compose:1.4.0"
     }
 

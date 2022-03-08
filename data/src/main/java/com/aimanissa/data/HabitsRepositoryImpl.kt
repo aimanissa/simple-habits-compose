@@ -13,7 +13,7 @@ class HabitsRepositoryImpl @Inject constructor(
     private val habitsDao: HabitsDao
 ) : HabitsRepository {
 
-    override suspend fun getAllHabitsRoster(): Flow<HabitsRoster> {
+    override suspend fun getAllHabitsRoster(): Flow<List<HabitsRoster>> {
         return flow {
             mapper.entityListToHabitsRosterList(habitsDao.getAllHabitsRosterWithUserGoals())
         }

@@ -21,3 +21,6 @@ class HabitsApplication : Application() {
             .build()
     }
 }
+
+val Application.appDependencies: AppDependencies
+    get() = (this as HabitsApplication).appDependencies

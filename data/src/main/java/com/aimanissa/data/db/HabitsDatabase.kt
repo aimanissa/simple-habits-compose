@@ -3,9 +3,8 @@ package com.aimanissa.data.db
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.aimanissa.data.db.entity.UserGoalEntity
 import com.aimanissa.data.db.entity.HabitsRosterEntity
-import com.aimanissa.data.db.entity.HabitsRosterWithUserGoals
+import com.aimanissa.data.db.entity.UserGoalEntity
 import com.aimanissa.data.db.mapper.DatabaseMapper
 
 @Database(

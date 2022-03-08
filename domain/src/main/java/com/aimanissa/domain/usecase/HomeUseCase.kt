@@ -9,7 +9,7 @@ class HomeUseCase @Inject constructor(
     private val repository: HabitsRepository
 ) {
 
-    suspend fun getAllHabitsRoster(): Flow<HabitsRoster> {
+    suspend fun getAllHabitsRoster(): Flow<List<HabitsRoster>> {
         return repository.getAllHabitsRoster()
     }
 }

@@ -7,7 +7,7 @@ import com.aimanissa.data.di.DataDependencies
 
 interface AppDependencies : CommonDependencies, DataDependencies {
 
-    // val destinations: Destinations
+    val destinations: Destinations
 }
 
 val LocalAppDependencies = compositionLocalOf<AppDependencies> { error("No app dependencies found!") }

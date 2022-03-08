@@ -1,7 +1,7 @@
 plugins {
     id("com.android.library")
     id("kotlin-android")
-    id("kotlin-kapt")
+    kotlin("kapt")
 }
 
 android {
@@ -31,7 +31,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = Dependencies.Jvm.targetVersion
     }
     buildFeatures {
         compose = true
@@ -58,4 +58,7 @@ dependencies {
 
     implementation(Dependencies.Dagger.dagger)
     kapt(Dependencies.Dagger.daggerCompiler)
+
+    androidTestImplementation(Dependencies.Compose.uiTest)
+    debugImplementation(Dependencies.Compose.toolingTest)
 }

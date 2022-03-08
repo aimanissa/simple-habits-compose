@@ -3,6 +3,7 @@
     package="com.aimanissa.simplehabits">
 
     <application
+        android:name=".HabitsApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleHabits">
         <activity
-            android:name="com.aimanissa.simplehabits.MainActivity"
+            android:name="com.aimanissa.simplehabits.ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SimpleHabits.NoActionBar">

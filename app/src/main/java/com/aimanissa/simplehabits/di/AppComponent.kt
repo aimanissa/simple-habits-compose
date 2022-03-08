@@ -10,6 +10,7 @@ import javax.inject.Singleton
     dependencies = [
         CommonDependencies::class,
         DataDependencies::class
-    ]
+    ],
+    modules = [NavigationModule::class]
 )
 interface AppComponent : AppDependencies
