@@ -5,7 +5,7 @@ import com.aimanissa.data.db.mapper.DatabaseMapper
 import com.aimanissa.domain.model.HabitsRoster
 import com.aimanissa.domain.repository.HabitsRepository
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class HabitsRepositoryImpl @Inject constructor(
@@ -14,9 +14,8 @@ class HabitsRepositoryImpl @Inject constructor(
 ) : HabitsRepository {
 
     override suspend fun getAllHabitsRoster(): Flow<List<HabitsRoster>> {
-        return flow {
-            mapper.entityListToHabitsRosterList(habitsDao.getAllHabitsRosterWithUserGoals())
-        }
+        return habitsDao.getAllHabitsRosterWithUserGoals()
+            .map { entity -> mapper.entityListToHabitsRosterList(entity) }
     }
 
     override suspend fun saveHabitsRoster(habitsRoster: HabitsRoster) {

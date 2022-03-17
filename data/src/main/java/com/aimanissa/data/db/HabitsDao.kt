@@ -8,6 +8,7 @@ import androidx.room.Transaction
 import com.aimanissa.data.db.entity.HabitsRosterEntity
 import com.aimanissa.data.db.entity.HabitsRosterWithUserGoals
 import com.aimanissa.data.db.entity.UserGoalEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface HabitsDao {
@@ -29,7 +30,7 @@ interface HabitsDao {
 
     @Transaction
     @Query("SELECT * FROM ${HabitsRosterEntity.TABLE_NAME}")
-    suspend fun getAllHabitsRosterWithUserGoals(): List<HabitsRosterWithUserGoals>
+    fun getAllHabitsRosterWithUserGoals(): Flow<List<HabitsRosterWithUserGoals>>
 
     @Query("DELETE FROM ${HabitsRosterEntity.TABLE_NAME} WHERE ${HabitsRosterEntity.ROSTER_ID}=(:rosterId)")
     suspend fun deleteHabitsRosterEntity(rosterId: Long)

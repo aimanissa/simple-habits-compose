@@ -40,6 +40,9 @@ object Dependencies {
         const val insets = "com.google.accompanist:accompanist-insets:$version"
         const val systemuicontroller = "com.google.accompanist:accompanist-systemuicontroller:$version"
         const val flowlayouts = "com.google.accompanist:accompanist-flowlayout:$version"
+
+        const val pager = "com.google.accompanist:accompanist-pager:0.14.0"
+        const val pagerIndicators = "com.google.accompanist:accompanist-pager-indicators:0.14.0"
     }
 
     object Dagger {

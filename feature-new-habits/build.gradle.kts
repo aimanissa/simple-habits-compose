@@ -50,6 +50,7 @@ dependencies {
 
     implementation(
         project(":domain"),
+        project(":data"),
         project(":common")
     )
 

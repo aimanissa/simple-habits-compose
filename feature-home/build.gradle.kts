@@ -50,6 +50,7 @@ dependencies {
 
     implementation(
         project(":domain"),
+        project(":data"),
         project(":common")
     )
 
@@ -63,6 +64,11 @@ dependencies {
         Dependencies.Compose.ui,
         Dependencies.Compose.material,
         Dependencies.Compose.tooling
+    )
+
+    implementation(
+        Dependencies.Accompanist.pager,
+        Dependencies.Accompanist.pagerIndicators
     )
 
     implementation(Dependencies.Navigation.navigationCompose)
