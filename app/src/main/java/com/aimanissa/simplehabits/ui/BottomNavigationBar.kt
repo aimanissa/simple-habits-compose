@@ -11,6 +11,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.NavGraph
+import androidx.navigation.NavHostController
 import com.aimanissa.common.find
 import com.aimanissa.common.ui.NavigationItem
 import com.aimanissa.feature_new_habit.navigation.api.NewHabitEntry
@@ -19,7 +20,7 @@ import com.aimanissa.simplehabits.di.LocalAppDependencies
 import com.google.accompanist.insets.navigationBarsPadding
 
 @Composable
-fun HabitsBottomNavBar(navController: NavController) {
+fun HabitsBottomNavBar(navController: NavHostController) {
     val destinations = LocalAppDependencies.current.destinations
     val currentRoute: String? = navController.currentDestination?.route
 

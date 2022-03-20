@@ -24,7 +24,7 @@ import androidx.room.PrimaryKey
 )
 data class UserGoalEntity(
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = GOAL_ID)
     val goalId: Long,
 

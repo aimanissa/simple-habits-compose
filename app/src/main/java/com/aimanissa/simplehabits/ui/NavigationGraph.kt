@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.aimanissa.common.find
@@ -14,8 +16,7 @@ import com.aimanissa.home_feature.navigation.api.HomeEntry
 import com.aimanissa.simplehabits.di.LocalAppDependencies
 
 @Composable
-fun NavigationGraph(paddingValues: PaddingValues) {
-    val navController = rememberNavController()
+fun NavigationGraph(navController: NavHostController, paddingValues: PaddingValues) {
     val destinations = LocalAppDependencies.current.destinations
 
     val homeScreen = destinations.find<HomeEntry>()

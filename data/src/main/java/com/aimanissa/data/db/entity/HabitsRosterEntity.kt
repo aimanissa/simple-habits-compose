@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = HabitsRosterEntity.TABLE_NAME)
 data class HabitsRosterEntity(
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = ROSTER_ID)
     val rosterId: Long,
 

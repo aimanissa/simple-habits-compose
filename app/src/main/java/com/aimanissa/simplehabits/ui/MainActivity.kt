@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                                 HabitsBottomNavBar(navController)
                             }
                         ) {
-                            NavigationGraph(it)
+                            NavigationGraph(navController, it)
                         }
                     }
                 }
